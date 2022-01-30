@@ -3,7 +3,8 @@ import {events} from './objects.js';
 
 /* API and fetch */
 /**
- * Generating
+ * Generating data from url with async fetch function
+ * Then, storing data into const eventsData
  *
  */
 var eventsUrl = "http://localhost:3000/events";
