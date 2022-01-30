@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso y registro | TimeInn</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/logo-img.png"/>
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+    <link rel="stylesheet" type="text/css" href="css/login.css"/>
+
+    <!-- Google fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+    </style>
+    <!-- JS -->
+    <script src="https://kit.fontawesome.com/2d12050ae0.js" crossorigin="anonymous"></script>
+    <script src="js/login.js" type="module" defer></script>
+
+</head>
+<body>
+<div class="login-heading">
+    <a href="home.html">
+        <img src="images/logo-img.png" alt="timeinn-logo">
+        <h1>TIMEINN</h1>
+    </a>
+</div>
+<main class="login-content">
+    <section class="user-benefits">
+        <div class="benefit 1">
+            <div>
+                <i class="fas fa-film"></i>
+            </div>
+            <div>
+                <h3>Entérate de los últimos estrenos</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, illum molestias nisi quam
+                    reprehenderit voluptatum.</p>
+            </div>
+        </div>
+        <div class="benefit 2">
+            <div>
+                <i class='far fa-calendar'></i>
+            </div>
+            <div>
+                <h3>Asiste a eventos exclusivos</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, illum molestias nisi quam
+                    reprehenderit voluptatum.</p>
+            </div>
+        </div>
+        <div class="benefit 3">
+            <div>
+                <i class="fas fa-rss"></i>
+            </div>
+            <div>
+                <h3>Recibe las principales noticias</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, illum molestias nisi quam
+                    reprehenderit voluptatum.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="login-space">
+        <form id="login-submission" onsubmit="return false">
+            <div class="h2-container">
+                <h2>Iniciar Sesión</h2>
+            </div>
+            <div class="data-container">
+                <input aria-label="Email" value="" type="text" autofocus="" id="email" name="email" placeholder="E-mail*"/>
+            </div>
+            <div class="data-container">
+                <input aria-label="Password" value="" type="password" autofocus="" id="password" name="password" placeholder="Contraseña*"/>
+                <span id="eye1" class="show-pass-icon eye" style="display: block"><i class="fas fa-eye"></i></span>
+                <span id="eye2" class="hide-pass-icon eye" style="display: none"><i class="fas fa-eye-slash"></i></span>
+            </div>
+            <button class="login-button" id="login-button" type="submit">
+                <div>
+                    <p>Iniciar sesión</p>
+                </div>
+            </button>
+
+            <div class="error-container">
+                <p id="error-space"></p>
+            </div>
+
+            <div class="register-space">
+                <div>
+                    <h3>¿No estás en TimeInn? ¡Regístrate!</h3>
+                </div>
+                <a class="register-link" href="./register.html">
+                    <div>
+                        <p>Crear cuenta</p>
+                    </div>
+                </a>
+            </div>
+        </form>
+    </section>
+</main>
+</body>
+</html>

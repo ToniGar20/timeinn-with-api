@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro | TimeInn</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/logo-img.png"/>
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+    <link rel="stylesheet" type="text/css" href="css/register.css"/>
+
+    <!-- Google fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+    </style>
+    <!-- JS -->
+    <script src="https://kit.fontawesome.com/2d12050ae0.js" crossorigin="anonymous"></script>
+    <script src="js/register.js" type="module" defer></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            $("#registred-user").load("./resources/registred-user.html");
+        });
+    </script>
+</head>
+<body>
+<div class="register-heading">
+    <a href="home.html">
+        <img src="images/logo-img.png" alt="timeinn-logo">
+        <h1>TIMEINN</h1>
+    </a>
+</div>
+<main class="register-content">
+
+    <section class="register-space">
+        <form id="register-form" method="post" onsubmit="return false">
+            <div class="h2-container">
+                <h2>Crear cuenta</h2>
+            </div>
+
+            <div class="data-container">
+                <input aria-label="username" value="" autofocus="" id="name" name="name" placeholder="Nombre*"/>
+            </div>
+
+            <div class="data-container">
+                <input aria-label="lastname" value="" autofocus="" id="lastname" name="lastname" placeholder="Apellido*"/>
+            </div>
+
+            <div class="data-container">
+                <input aria-label="email" value="" autofocus="" id="email" name="email" placeholder="E-mail*"/>
+            </div>
+
+            <div class="data-container">
+                <input aria-label="password" type="password" id="password" autofocus="" class="password" name="password" placeholder="Contraseña*"/>
+                <span class="show-pass-icon eye" style="display: block"><i class="fas fa-eye"></i></span>
+                <span class="hide-pass-icon eye" style="display: none"><i class="fas fa-eye-slash"></i></span>
+            </div>
+
+            <div class="data-container">
+                <input aria-label="password2" type="password" id="password2" value="" autofocus="" class="password" name="password2" placeholder="Repetir contraseña*"/>
+                <span class="show-pass-icon eye" style="display: block"><i class="fas fa-eye"></i></span>
+                <span class="hide-pass-icon eye" style="display: none"><i class="fas fa-eye-slash"></i></span>
+            </div>
+
+            <button class="register-button" id="register-button" type="submit"> Registrarse</button>
+
+            <div class="error-container">
+                <p id="error-space"></p>
+            </div>
+
+            <div class="login-space">
+                <a class="login-link" href="./login.html">
+                    <div>
+                        ¿Ya estás en TimeInn? Inicia sesión
+                    </div>
+                </a>
+            </div>
+
+        </form>
+
+        <div id="registred-user" class="subscription">
+
+        </div>
+    </section>
+</main>
+</body>
+</html>

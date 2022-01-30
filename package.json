@@ -1,0 +1,28 @@
+{
+  "name": "timeinn",
+  "version": "1.0.0",
+  "description": "Second project of DIW-DWEC. Made by Toni Gómez & Toni García",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonigomez02/TimeInn.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tonigomez02/TimeInn/issues"
+  },
+  "homepage": "https://github.com/tonigomez02/TimeInn#readme",
+  "devDependencies": {
+    "mocha": "^9.1.3"
+  },
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  }
+}
