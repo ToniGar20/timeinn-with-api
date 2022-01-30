@@ -1,8 +1,22 @@
 /* Importing the objects for the content */
 import {events} from './objects.js';
 
+/* API and fetch */
+/**
+ * Generating
+ *
+ */
+var eventsUrl = "http://localhost:3000/events";
 
-/*A listeners that is called when the page is loaded for the first time*/
+async function getData(eventsUrl) {
+    const response = await fetch(eventsUrl);
+    return await response.json();
+}
+
+const eventsData = await getData(eventsUrl);
+console.log(eventsData);
+
+/* A listener that is called when the page is loaded for the first time */
 window.addEventListener("load", function () {
     if (window.location.href === "../events.html"){
         eventsGeneration(events.length)
@@ -43,14 +57,14 @@ export function eventsGeneration(eventsLength) {
         divTitleIcons.appendChild(title)
         div.appendChild(divTitleIcons)
 
-        /*A div with the icons of edit and delete*/
+        /* A div with the icons of edit and delete*/
         let divIcons = document.createElement("div")
         divIcons.className = "div-icons"
         divIcons.innerHTML += '<button  class="button-icon"><i class="fas fa-pen"/></button>'
         divIcons.innerHTML += '<button  class="button-icon"><i class="fas fa-trash"/></button>'
         div.appendChild(divIcons)
 
-        /*Div that contains information of the ecent*/
+        /*Div that contains information of the event*/
         let divGeneralText = document.createElement("div")
         divGeneralText.className = "eventsText"
 
@@ -162,3 +176,4 @@ function penListener() {
     }
 }
 
+eventsGeneration(eventsData.length);
