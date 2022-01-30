@@ -1,0 +1,58 @@
+{
+    "events": [
+        {
+            "id": "1",
+            "name": "Event number 1",
+            "date": "2021-12-01",
+            "place": "Cine ciutat, Palma",
+            "price": 7,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, facilis quas quia quisquam veniam voluptatum!",
+            "img": "./images/cinema-festival-vertical-poster-3451302.jpg"
+        },
+        {
+            "id": "2",
+            "name": "Event number 2",
+            "date": "2022-01-27",
+            "place": "Teatre, Inca",
+            "price": 20,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, facilis quas quia quisquam veniam voluptatum!",
+            "img": "./images/cinema-festival-vertical-poster-3451302.jpg"
+        },
+        {
+            "id": "3",
+            "name": "Event number 3",
+            "date": "2021-12-29",
+            "place": "Casal Solleric, Palma",
+            "price": 11,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, facilis quas quia quisquam veniam voluptatum!",
+            "img": "./images/cinema-festival-vertical-poster-3451302.jpg"
+        },
+        {
+            "id": "4",
+            "name": "Event number 4",
+            "date": "2021-12-04",
+            "place": "Ocimax, Palma",
+            "price": 1,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, facilis quas quia quisquam veniam voluptatum!",
+            "img": "./images/cinema-festival-vertical-poster-3451302.jpg"
+        },
+        {
+            "id": "5",
+            "name": "Event number 5",
+            "date": "2021-12-10",
+            "place": "Cine de Sencelles",
+            "price": 15,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, facilis quas quia quisquam veniam voluptatum!",
+            "img": "./images/cinema-festival-vertical-poster-3451302.jpg"
+        },
+        {
+            "id": "6",
+            "name": "Event number 6",
+            "date": "2022-01-21",
+            "place": "Cine de Manacor",
+            "price": 5,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, facilis quas quia quisquam veniam voluptatum!",
+            "img": "./images/cinema-festival-vertical-poster-3451302.jpg"
+        }
+    ]
+}
