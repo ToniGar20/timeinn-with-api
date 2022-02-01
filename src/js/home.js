@@ -1,7 +1,27 @@
 /* Importing the objects for the content */
-import {movies, news} from './objects.js';
 import {eventsGeneration} from "./events.js";
 import {getCookie} from "./generic.js";
+
+/*
+ * API and fetch to READ data!
+ * Generating variables "news" and "movies" with the information of the JSON
+ * Reading the endpoints /news and /movies
+ */
+
+
+var newsUrl = "http://localhost:3000/news";
+var moviesUrl = "http://localhost:3000/movies";
+
+async function getData(url) {
+    const response = await fetch(url);
+    return await response.json();
+}
+
+const news = await getData(newsUrl);
+const movies = await getData(moviesUrl);
+
+console.log(news);
+console.log(movies);
 
 /*
  * A loop that inject the content of the array news in the HTML file
@@ -64,7 +84,7 @@ for (let i = 0; i < 6; i++) {
 
     //Loading title
     let movieTitle = document.getElementsByClassName("movie-title");
-    movieTitle[i].childNodes[1].innerHTML = movies[i].tile;
+    movieTitle[i].childNodes[1].innerHTML = movies[i].title;
 
     //Loading rating
     let movieRating = document.getElementsByClassName("movie-rating");
