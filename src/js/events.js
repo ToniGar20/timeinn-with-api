@@ -1,13 +1,13 @@
 /*
  * API and fetch to READ data!
- * Generating variable "events" with the information of the information saved
- * Reading the endpoint
+ * Generating variable "events" with the information of the JSON
+ * Reading the endpoint /events
  *
  */
 var eventsUrl = "http://localhost:3000/events";
 
-async function getData(eventsUrl) {
-    const response = await fetch(eventsUrl);
+async function getData(url) {
+    const response = await fetch(url);
     return await response.json();
 }
 
