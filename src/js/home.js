@@ -1,4 +1,4 @@
-/* Importing the objects for the content */
+/* Importing function for event generation at homepage */
 import {eventsGeneration} from "./events.js";
 import {getCookie} from "./generic.js";
 
