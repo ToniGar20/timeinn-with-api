@@ -1,6 +1,6 @@
 /* Importing function for event generation at homepage */
 import {eventsGeneration} from "./events.js";
-import {getCookie} from "./generic.js";
+import {getCookie} from "./helperfunctions.js";
 
 /*
  * API and fetch to READ data!
