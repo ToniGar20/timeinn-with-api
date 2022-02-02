@@ -23,14 +23,12 @@ document.getElementById("login-submission").addEventListener("submit", () => {
         .then(response => response.json())
         .then(token => {
                 setCookie('loginToken', token.access_token, 365)
-                setCookie('userLoged', token.email, 365)
+                setCookie('userLoged', emailValue, 365)
+                window.location.href = './home.html';
+
             }
         )
         .catch( () => console.log("Error ocurred..."))
-
-    if (getCookie("loginToken")) {
-        window.location.href = './home.html';
-    }
 
     // // Storing the validation of both inputs
     // let email = emailValidation(emailValue);
