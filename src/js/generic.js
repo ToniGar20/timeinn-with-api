@@ -44,7 +44,7 @@ function printLogIn(content, user) {
     if (user !== "") {
         document.getElementsByClassName(content)[0].innerHTML =
             "<div style='display: flex'><img class=\"login\" src=\"images/Login%20User%20Icon%20PNG%20Images%20_%20Vector%20and%20PSD%20Files%20_%20Free%20Download%20on%20Pngtree.png\">" +
-            `<p style="cursor: context-menu" class="p-login">${user}</p></div>` +
+            `<p style="cursor: context-menu" class="p-login">${getCookie("userLoged")}</p></div>` +
             "<div class=\"logout\"><i style='color: var(--main-brand-color);' class=\"fas fa-power-off\"></i><button id=logout style='border: none; cursor:pointer; background-color: inherit; color: var(--p-white)' >Salir</button></div>"
     } else {
         document.getElementsByClassName(content)[0].innerHTML =
@@ -103,7 +103,8 @@ window.addEventListener("load", () => {
     let logoutButtonClick = document.getElementById("logout");
     if (logoutButtonClick !== null) {
         logoutButtonClick.addEventListener("click", () => {
-        document.cookie = `loginSuccess=; expires= 01 Jan 1970 00:00:00 UTC; path=/`;
+        document.cookie = `loginToken=; expires= 01 Jan 1970 00:00:00 UTC; path=/`;
+        document.cookie = `userLoged=; expires= 01 Jan 1970 00:00:00 UTC; path=/`;
         let currentWindow = window.location.href;
         window.location.href = currentWindow;
         });
