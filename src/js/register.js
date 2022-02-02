@@ -1,5 +1,6 @@
 import {users} from "./objects.js";
 import {emailValidationRegister, nameValidationRegister, passwordValidationRegister} from "./register-functions.mjs"
+import {setCookie} from "./helperfunctions.js";
 
 for (let i = 0; i < document.getElementsByClassName("show-pass-icon eye").length; i++) {
     document.getElementsByClassName("show-pass-icon eye")[i].addEventListener("mousedown", showText);
@@ -91,7 +92,22 @@ document.getElementById("register-form").addEventListener("submit", () => {
                 let randomId = Math.round(Math.random() * 1000)
                 let fullname = nameValue + " " + lastnameValue
 
-                users.push({id: randomId, name: nameValue, lastname: lastnameValue, email: emailValue, password: passwordValue})
+                fetch('http://localhost:3001/auth/register', {
+                    method: 'POST',
+                    body: JSON.stringify({
+                        email: emailValue,
+                        password: passwordValue
+                    }),
+                    headers: {
+                        "Content-type": "application/json; charset=UTF-8"
+                    }
+                })
+                    .then(response => response.json())
+                    .then (token => {
+                        console.log(token);
+                        setCookie('loginToken', token.access_token, 365) })
+
+                //users.push({id: randomId, name: nameValue, lastname: lastnameValue, email: emailValue, password: passwordValue})
                 setCookie("loginSuccess", fullname, 365)
                 localStorage.setItem("users", JSON.stringify(users))
 
@@ -125,13 +141,4 @@ document.getElementById("register-form").addEventListener("submit", () => {
         nameInput.focus()
     }
 
-
 });
-
-
-function setCookie(cname, cvalue, exdays) {
-    const d = new Date();
-    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-    let expires = "expires="+d.toUTCString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
