@@ -1,5 +1,4 @@
 {
-
   "events": [
     {
       "name": "Event number 1",
@@ -29,10 +28,10 @@
       "img": "./images/cinema-festival-vertical-poster-3451302.jpg"
     },
     {
-      "name": "Event number 4",
+      "name": "Event number 44",
       "place": "Ocimax, Palma",
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, facilis quas quia quisquam veniam voluptatum!",
-      "price": "1",
+      "price": "100",
       "date": "2021-12-04",
       "img": "./images/cinema-festival-vertical-poster-3451302.jpg",
       "id": 4
