@@ -1,3 +1,5 @@
+import {setCookie, getCookie} from "./helperfunctions.js";
+
 /**
  * Go to TOP function and button behaviour
  * @type {HTMLElement}
@@ -30,7 +32,7 @@ window.addEventListener("load", function () {
 })
 
 function takingLogInValues() {
-    let user = getCookie("loginSuccess");
+    let user = getCookie("loginToken");
     if (window.innerWidth < 800) {
         printLogIn("login-content-hamburger", user)
     } else {
@@ -57,30 +59,6 @@ function printLogIn(content, user) {
  * After form answer (fill or close) cookie is setted as "form-subscription-answered"
  * @type {HTMLElement}
  */
-
-//Helper function for set a cookie
-function setCookie(cname, cvalue, exdays) {
-    const d = new Date();
-    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-    let expires = "expires=" + d.toUTCString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
-
-//Helper function for query a cookie
-export function getCookie(cname) {
-    let name = cname + "=";
-    let ca = document.cookie.split(';');
-    for (let i = 0; i < ca.length; i++) {
-        let c = ca[i];
-        while (c.charAt(0) === ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) === 0) {
-            return c.substring(name.length, c.length);
-        }
-    }
-    return "";
-}
 
 window.addEventListener("load", () => {
 
