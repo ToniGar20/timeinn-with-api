@@ -1,0 +1,186 @@
+{
+  "events": [
+    {
+      "name": "Event number 1",
+      "place": "Cine ciutat, Palma",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, facilis quas quia quisquam veniam voluptatum!",
+      "price": "711",
+      "date": "2021-12-01",
+      "img": "./images/cinema-festival-vertical-poster-3451302.jpg",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Event number 2",
+      "date": "2022-01-27",
+      "place": "Teatre, Inca",
+      "price": 20,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, facilis quas quia quisquam veniam voluptatum!",
+      "img": "./images/cinema-festival-vertical-poster-3451302.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Event number 3",
+      "date": "2021-12-29",
+      "place": "Casal Solleric, Palma",
+      "price": 11,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, facilis quas quia quisquam veniam voluptatum!",
+      "img": "./images/cinema-festival-vertical-poster-3451302.jpg"
+    },
+    {
+      "name": "Event number 44",
+      "place": "Ocimax, Palma",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, facilis quas quia quisquam veniam voluptatum!",
+      "price": "100",
+      "date": "2021-12-04",
+      "img": "./images/cinema-festival-vertical-poster-3451302.jpg",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "name": "Event number 5",
+      "date": "2021-12-10",
+      "place": "Cine de Sencelles",
+      "price": 15,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, facilis quas quia quisquam veniam voluptatum!",
+      "img": "./images/cinema-festival-vertical-poster-3451302.jpg"
+    },
+    {
+      "name": "Event number random",
+      "place": "Random place",
+      "description": "Random thing",
+      "price": "222",
+      "date": "2022-01-30",
+      "img": "./images/cinema-festival-vertical-poster-3451302.jpg",
+      "id": 456270
+    },
+    {
+      "id": 532403,
+      "name": "New event this saturday",
+      "date": "2022-02-05",
+      "place": "The best place you'll ever know",
+      "price": "1000",
+      "description": "This is a date of magic things.",
+      "img": "./images/cinema-festival-vertical-poster-3451302.jpg"
+    }
+  ],
+  "news": [
+    {
+      "title": "New number 1",
+      "date": "2021-12-01",
+      "author": "Toni García",
+      "category": "Estreno",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae culpa cumque distinctio enim exercitationem officiis, quas reprehenderit suscipit ut voluptas?"
+    },
+    {
+      "title": "New number 2",
+      "date": "2021-12-06",
+      "author": "Toni Gómez",
+      "category": "Cítrica",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae culpa cumque distinctio enim exercitationem officiis, quas reprehenderit suscipit ut voluptas?"
+    },
+    {
+      "title": "New number 3",
+      "date": "2021-12-03",
+      "author": "Jeroni Mateo",
+      "category": "Rodaje",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae culpa cumque distinctio enim exercitationem officiis, quas reprehenderit suscipit ut voluptas?"
+    },
+    {
+      "title": "New number 4",
+      "date": "2021-12-01",
+      "author": "Clasicoman",
+      "category": "Actores / Actrices",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae culpa cumque distinctio enim exercitationem officiis, quas reprehenderit suscipit ut voluptas?"
+    },
+    {
+      "title": "New number 5",
+      "date": "2021-12-01",
+      "author": "Daniel Maestre",
+      "category": "Cítrica",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae culpa cumque distinctio enim exercitationem officiis, quas reprehenderit suscipit ut voluptas?"
+    }
+  ],
+  "movies": [
+    {
+      "id": 1,
+      "title": "Mad Max",
+      "date": "2021-12-01",
+      "image": "#1",
+      "category": "c",
+      "rating": 1,
+      "trailer": "link1",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut autem commodi culpa facere hic maiores similique. Dignissimos."
+    },
+    {
+      "id": 2,
+      "title": "Atrápame si puedes",
+      "date": "2021-12-01",
+      "image": "#2",
+      "category": "c",
+      "rating": 2.5,
+      "trailer": "link2",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut autem commodi culpa facere hic maiores similique. Dignissimos."
+    },
+    {
+      "id": 3,
+      "title": "Sin City",
+      "date": "2021-12-01",
+      "image": "#3",
+      "category": "c",
+      "rating": 3.5,
+      "trailer": "link3",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut autem commodi culpa facere hic maiores similique. Dignissimos."
+    },
+    {
+      "id": 4,
+      "title": "El renacido",
+      "date": "2021-12-01",
+      "image": "#4",
+      "category": "c",
+      "rating": 4.5,
+      "trailer": "link4",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut autem commodi culpa facere hic maiores similique. Dignissimos."
+    },
+    {
+      "id": 5,
+      "title": "Rogue One",
+      "date": "2021-12-01",
+      "image": "#5",
+      "category": "c",
+      "rating": 3.5,
+      "trailer": "link5",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut autem commodi culpa facere hic maiores similique. Dignissimos."
+    },
+    {
+      "id": 6,
+      "title": "Toy Story 3",
+      "date": "2021-12-01",
+      "image": "#6",
+      "category": "c",
+      "rating": 3.5,
+      "trailer": "link6",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut autem commodi culpa facere hic maiores similique. Dignissimos."
+    },
+    {
+      "id": 7,
+      "title": "Vengadores: Endgame",
+      "date": "2021-12-01",
+      "image": "#7",
+      "category": "c",
+      "rating": 3.5,
+      "trailer": "link7",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut autem commodi culpa facere hic maiores similique. Dignissimos."
+    },
+    {
+      "id": 8,
+      "title": "Guardianes de la Galaxia",
+      "image": "#8",
+      "date": "2022-01-01",
+      "category": "c",
+      "rating": 5,
+      "trailer": "link8",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut autem commodi culpa facere hic maiores similique. Dignissimos."
+    }
+  ]
+}
