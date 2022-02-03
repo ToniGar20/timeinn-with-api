@@ -64,43 +64,6 @@
       "img": "./images/cinema-festival-vertical-poster-3451302.jpg"
     }
   ],
-  "news": [
-    {
-      "title": "New number 1",
-      "date": "2021-12-01",
-      "author": "Toni García",
-      "category": "Estreno",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae culpa cumque distinctio enim exercitationem officiis, quas reprehenderit suscipit ut voluptas?"
-    },
-    {
-      "title": "New number 2",
-      "date": "2021-12-06",
-      "author": "Toni Gómez",
-      "category": "Cítrica",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae culpa cumque distinctio enim exercitationem officiis, quas reprehenderit suscipit ut voluptas?"
-    },
-    {
-      "title": "New number 3",
-      "date": "2021-12-03",
-      "author": "Jeroni Mateo",
-      "category": "Rodaje",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae culpa cumque distinctio enim exercitationem officiis, quas reprehenderit suscipit ut voluptas?"
-    },
-    {
-      "title": "New number 4",
-      "date": "2021-12-01",
-      "author": "Clasicoman",
-      "category": "Actores / Actrices",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae culpa cumque distinctio enim exercitationem officiis, quas reprehenderit suscipit ut voluptas?"
-    },
-    {
-      "title": "New number 5",
-      "date": "2021-12-01",
-      "author": "Daniel Maestre",
-      "category": "Cítrica",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae culpa cumque distinctio enim exercitationem officiis, quas reprehenderit suscipit ut voluptas?"
-    }
-  ],
   "movies": [
     {
       "id": 1,

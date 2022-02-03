@@ -8,51 +8,67 @@ import {getCookie} from "./helperfunctions.js";
  * Reading the endpoints /news and /movies
  */
 
-
-var newsUrl = "http://localhost:3000/news";
+// movies data endpoint
 var moviesUrl = "http://localhost:3000/movies";
 
-async function getData(url) {
+// async function with fetch
+async function getMoviesData(url) {
     const response = await fetch(url);
     return await response.json();
 }
-
-const news = await getData(newsUrl);
-const movies = await getData(moviesUrl);
-
-console.log(news);
+//Storing data when calling function with the saved endpoint
+const movies = await getMoviesData(moviesUrl);
 console.log(movies);
+
+// news data endpoint
+var newsUrl = "http://localhost:3001/news";
+//headers setting token value as Bearer Auth
+let authHeaders = new Headers();
+authHeaders.set('Authorization', 'Bearer' +  btoa(getCookie('loginToken')));
+let authTokenSettings = { headers: authHeaders }
+
+async function getNewsData(url, settings) {
+    const response = await (fetch(url, settings));
+    return await response.json();
+}
+
+const news = await getNewsData(newsUrl, authTokenSettings);
+console.log(news);
+
 
 /*
  * A loop that inject the content of the array news in the HTML file
  */
 //Most recent news
-news.sort(function (a, b) {
-    return new Date(b.date) - new Date(a.date);
-});
+function mostRecentNews(newsObject) {
+    newsObject.sort(function (a, b) {
+        return new Date(b.date) - new Date(a.date);
+    });
+}
 
+function newsContentDisplay (newsObject) {
+    let mainDivNews = document.getElementsByClassName("title-author-date");
+    let description = document.getElementsByClassName("description-news");
+    let authDate = document.getElementsByClassName("auth-date");
 
-let mainDivNews = document.getElementsByClassName("title-author-date");
-let description = document.getElementsByClassName("description-news");
-let authDate = document.getElementsByClassName("auth-date");
+    for (let i = 0; i < 4; i++) {
 
-for (let i = 0; i < 4; i++) {
-
-    if (i === 0) {
-        let salidaTitle = `<h2 class="heading-main-new">${news[i].title}</h2>`
-        salidaTitle += `<p style="color: white; font-size: 1.4vmax">${news[i].author} - ${news[i].date}</p>`
-        let salidaDescription = `<p class="p-description-main-new">${news[i].description}</p>`
-        mainDivNews[i].innerHTML = salidaTitle
-        description[i].innerHTML = salidaDescription
-    } else {
-        if (news[i].description.length > 40) {
-
-            let salidaTitle = `<h2 class="heading-secondary-new">${news[i].title}</h2>`
-            let salidaAuthDat = `<p class="p-auth-date-secondary-new">${news[i].author} - ${news[i].date}</p>`
-            let salidaDescription = `<p class="p-description-secondary-new">${news[i].description}</p>`
+        if (i === 0) {
+            let salidaTitle = `<h2 class="heading-main-new">${news[i].title}</h2>`
+            salidaTitle += `<p style="color: white; font-size: 1.4vmax">${news[i].author} - ${news[i].date}</p>`
+            let salidaDescription = `<p class="p-description-main-new">${news[i].description}</p>`
             mainDivNews[i].innerHTML = salidaTitle
             description[i].innerHTML = salidaDescription
-            authDate[i].innerHTML = salidaAuthDat
+        } else {
+            if (news[i].description.length > 40) {
+
+                let salidaTitle = `<h2 class="heading-secondary-new">${news[i].title}</h2>`
+                let salidaAuthDat = `<p class="p-auth-date-secondary-new">${news[i].author} - ${news[i].date}</p>`
+                let salidaDescription = `<p class="p-description-secondary-new">${news[i].description}</p>`
+                mainDivNews[i].innerHTML = salidaTitle
+                description[i].innerHTML = salidaDescription
+                authDate[i].innerHTML = salidaAuthDat
+            }
         }
     }
 }
