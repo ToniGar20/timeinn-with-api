@@ -1,6 +1,6 @@
 /* Importing function for event generation at homepage */
 import {eventsGeneration} from "./events.js";
-import {getCookie} from "./helperfunctions.js";
+import {getCookie, setCookie} from "./helperfunctions.js";
 
 /*
  * API and fetch to READ data!
@@ -23,18 +23,17 @@ console.log(movies);
 // news data endpoint
 var newsUrl = "http://localhost:3001/news";
 //headers setting token value as Bearer Auth
-let authHeaders = new Headers();
-authHeaders.set('Authorization', 'Bearer' +  btoa(getCookie('loginToken')));
-let authTokenSettings = { headers: authHeaders }
+let token = getCookie('loginToken');
+let tokenHeader = new Headers();
+tokenHeader.set('Authorization', 'Bearer  ' +  btoa(token));
 
 async function getNewsData(url, settings) {
     const response = await (fetch(url, settings));
     return await response.json();
 }
 
-const news = await getNewsData(newsUrl, authTokenSettings);
+const news = await getNewsData(newsUrl, { headers: tokenHeader });
 console.log(news);
-
 
 /*
  * A loop that inject the content of the array news in the HTML file
