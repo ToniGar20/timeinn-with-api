@@ -22,13 +22,19 @@ document.getElementById("login-submission").addEventListener("submit", () => {
     })
         .then(response => response.json())
         .then(token => {
-                setCookie('loginToken', token.access_token, 365)
-                setCookie('userLoged', emailValue, 365)
-                window.location.href = './home.html';
-
+                if(token.access_token !== undefined) {
+                    setCookie('loginToken', token.access_token, 365)
+                    setCookie('userLoged', emailValue, 365)
+                    window.location.href = './home.html';
+                } else {
+                    let errorVisibilityChanger = document.getElementsByClassName("error-container")[0];
+                    let errorMessage = document.getElementById("error-space");
+                    errorMessage.innerHTML = "Los datos introducidos no están registrados";
+                    errorVisibilityChanger.style.display = "block";
+                }
             }
         )
-        .catch( () => console.log("Error ocurred..."))
+        .catch( () => console.log("Error occurred fetching data."))
 
     // // Storing the validation of both inputs
     // let email = emailValidation(emailValue);
