@@ -105,7 +105,9 @@ document.getElementById("register-form").addEventListener("submit", () => {
                     .then(response => response.json())
                     .then (token => {
                         console.log(token);
-                        setCookie('loginToken', token.access_token, 365) })
+                        setCookie('loginToken', token.access_token, 365);
+                        setCookie('userLoged', emailValue, 365);
+                    })
 
                 //users.push({id: randomId, name: nameValue, lastname: lastnameValue, email: emailValue, password: passwordValue})
                 setCookie("loginSuccess", fullname, 365)
