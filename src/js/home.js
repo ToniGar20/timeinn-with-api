@@ -1,6 +1,6 @@
 /* Importing function for event generation at homepage */
 import {eventsGeneration} from "./events.js";
-import {getCookie} from "./helperfunctions.js";
+import {getCookie, setCookie} from "./helperfunctions.js";
 
 /*
  * API and fetch to READ data!
@@ -11,36 +11,49 @@ import {getCookie} from "./helperfunctions.js";
 // movies data endpoint
 var moviesUrl = "http://localhost:3000/movies";
 
-// async function with fetch
+// async function with fetch and error handling
 async function getMoviesData(url) {
-    const response = await fetch(url);
-    return await response.json();
+    try {
+        const response = await fetch(url);
+        return await response.json();
+    } catch (error) {
+        console.log(error);
+    }
 }
 //Storing data when calling function with the saved endpoint
 const movies = await getMoviesData(moviesUrl);
 console.log(movies);
 
-// news data endpoint
+// Data of the second endpoint
 var newsUrl = "http://localhost:3001/news";
-//headers setting token value as Bearer Auth
+let token = getCookie('loginToken');
 let authHeaders = new Headers();
-authHeaders.set('Authorization', 'Bearer' +  btoa(getCookie('loginToken')));
+authHeaders.set('Authorization', 'Bearer ' +  token);
 let authTokenSettings = { headers: authHeaders }
 
+// async function with fetch and error handling
 async function getNewsData(url, settings) {
-    const response = await (fetch(url, settings));
-    return await response.json();
+    try {
+        const response = await (fetch(url, settings));
+        return await response.json();
+    } catch (error) {
+        console.log(error);
+    }
 }
-
+//Storing data when calling function with the saved endpoint
 const news = await getNewsData(newsUrl, authTokenSettings);
 console.log(news);
 
+//if function worked, calling functions to draw the content
+if(news) {
+    mostRecentNews(news)
+    newsContentDisplay(news)
+}
 
 /*
  * A loop that inject the content of the array news in the HTML file
  */
-//Most recent news
-function mostRecentNews(newsObject) {
+function mostRecentNews (newsObject) {
     newsObject.sort(function (a, b) {
         return new Date(b.date) - new Date(a.date);
     });
