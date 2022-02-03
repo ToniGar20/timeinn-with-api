@@ -44,8 +44,8 @@ async function getNewsData(url, settings) {
 const news = await getNewsData(newsUrl, authTokenSettings);
 console.log(news);
 
-//if function worked, calling functions to draw the content
-if(news) {
+//if function worked (arrays having any length), calling functions to draw the content
+if(news.length !== undefined) {
     mostRecentNews(news)
     newsContentDisplay(news)
 }
